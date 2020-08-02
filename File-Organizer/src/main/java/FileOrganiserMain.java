@@ -20,61 +20,61 @@ public class FileOrganiserMain {
                             .log("The header is ${headers}")
                             .choice()
                             .when(header("CamelFileNameConsumed").endsWith(".html"))
-                            .to("file:" + path + "\\Arranged Files\\HTML files")
+                            .to("file:" + path + "\\Organised Files\\HTML files")
 
                             .when(header("CamelFileNameConsumed").endsWith(".txt"))
-                            .to("file:" + path + "\\Arranged Files\\Text Files")
+                            .to("file:" + path + "\\Organised Files\\Text Files")
 
                             .when(header("CamelFileNameConsumed").endsWith(".cpp"))
-                            .to("file:" + path + "\\Arranged Files\\Codes")
+                            .to("file:" + path + "\\Organised Files\\Codes")
 
                             .when(header("CamelFileNameConsumed").endsWith(".py"))
-                            .to("file:" + path + "\\Arranged Files\\Codes")
+                            .to("file:" + path + "\\Organised Files\\Codes")
 
                             .when(header("CamelFileNameConsumed").endsWith(".java"))
-                            .to("file:" + path + "\\Arranged Files\\Codes")
+                            .to("file:" + path + "\\Organised Files\\Codes")
 
                             .when(header("CamelFileNameConsumed").endsWith(".ppt"))
-                            .to("file:" + path + "\\Arranged Files\\PowerPoint")
+                            .to("file:" + path + "\\Organised Files\\PowerPoint")
 
                             .when(header("CamelFileNameConsumed").endsWith(".xlsx"))
-                            .to("file:" + path + "\\Arranged Files\\Excel Files")
+                            .to("file:" + path + "\\Organised Files\\Excel Files")
 
                             .when(header("CamelFileNameConsumed").endsWith(".pdf"))
-                            .to("file:" + path + "\\Arranged Files\\PDF files")
+                            .to("file:" + path + "\\Organised Files\\PDF files")
 
                             .when(header("CamelFileNameConsumed").endsWith(".docx"))
-                            .to("file:" + path + "\\Arranged Files\\Word Doc files")
+                            .to("file:" + path + "\\Organised Files\\Word Doc files")
 
                             .when(header("CamelFileNameConsumed").endsWith(".zip"))
-                            .to("file:" + path + "\\Arranged Files\\Compressed files")
+                            .to("file:" + path + "\\Organised Files\\Compressed files")
 
                             .when(header("CamelFileNameConsumed").endsWith(".rar"))
-                            .to("file:" + path + "\\Arranged Files\\Compressed files")
+                            .to("file:" + path + "\\Organised Files\\Compressed files")
 
                             .when(header("CamelFileNameConsumed").endsWith(".PNG"))
-                            .to("file:" + path + "\\Arranged Files\\Images")
+                            .to("file:" + path + "\\Organised Files\\Images")
 
                             .when(header("CamelFileNameConsumed").endsWith(".jpg"))
-                            .to("file:" + path + "\\Arranged Files\\Images")
+                            .to("file:" + path + "\\Organised Files\\Images")
 
                             .when(header("CamelFileNameConsumed").endsWith(".jpeg"))
-                            .to("file:" + path + "\\Arranged Files\\Images")
+                            .to("file:" + path + "\\Organised Files\\Images")
 
                             .when(header("CamelFileNameConsumed").endsWith(".gif"))
-                            .to("file:" + path + "\\Arranged Files\\Images")
+                            .to("file:" + path + "\\Organised Files\\Images")
 
                             .when(header("CamelFileNameConsumed").endsWith(".mkv"))
-                            .to("file:" + path + "\\Arranged Files\\Videos")
+                            .to("file:" + path + "\\Organised Files\\Videos")
 
                             .when(header("CamelFileNameConsumed").endsWith(".mp4"))
-                            .to("file:" + path + "\\Arranged Files\\Videos")
+                            .to("file:" + path + "\\Organised Files\\Videos")
 
                             .when(header("CamelFileNameConsumed").endsWith(".mp3"))
-                            .to("file:" + path + "\\Arranged Files\\Music")
+                            .to("file:" + path + "\\Organised Files\\Music")
 
                             .otherwise()
-                            .to("file:" + path + "\\Arranged Files\\Other files")
+                            .to("file:" + path + "\\Organised Files\\Other files")
                             .end();
                 }
             });
