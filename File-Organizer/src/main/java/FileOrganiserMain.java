@@ -16,14 +16,11 @@ public class FileOrganiserMain {
                     System.out.println("Enter the path :");
                     String path = sc.next();
                     System.out.println(path);
-                    from("file:" + path + "?noop=true")
+                    from("file:" + path + "?delete=true")
                             .log("The header is ${headers}")
                             .choice()
                             .when(header("CamelFileNameConsumed").endsWith(".html"))
                             .to("file:" + path + "\\Organised Files\\HTML files")
-
-                            .when(header("CamelFileNameConsumed").endsWith(".txt"))
-                            .to("file:" + path + "\\Organised Files\\Text Files")
 
                             .when(header("CamelFileNameConsumed").endsWith(".cpp"))
                             .to("file:" + path + "\\Organised Files\\Codes")
