@@ -1,5 +1,5 @@
 # File-Organiser
-Created a file organiser using Apache Camel which polls a particular directory provided by the user and all the files of same filetype(Images , videos, pdf etc.) are kept in the same folder which makes it easy for the user to find the required files of a particular type.
+Created a file organiser using Apache Camel which polls a particular directory provided by the user and all the files of same filetype(Images , videos, pdf) are kept in the same folder which makes it easy for the user to find the required files of a particular type.
 
 # The files are organised into following types :-
                       Images
